@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'Outfit';
+    font-weight: 100 900;
+    src: url(recipe-page-main/assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'young-serif';
+    font-weight: 100 900;
+    src: url(recipe-page-main/assets/fonts/young-serif/YoungSerif-Regular.ttf) format('truetype');
+}
+
+/* Colors
+- White: hsl(0, 0%, 100%)
+
+- Stone 100: hsl(30, 54%, 90%)
+- Stone 150: hsl(30, 18%, 87%)
+- Stone 600: hsl(30, 10%, 34%)
+- Stone 900: hsl(24, 5%, 18%)
+
+- Brown 800: hsl(14, 45%, 36%)
+
+- Rose 800: hsl(332, 51%, 32%)
+- Rose 50: hsl(330, 100%, 98%) 
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-background-color: hsl(330, 100%, 98%);
+    --secondary-background-color: hsl(0, 0%, 100%);
+    --paragrah-background-color: hsl(0, 0%, 100%);
+    --h1-text-color: hsl(24, 5%, 18%);
+    --h2-text-color: hsl(14, 45%, 36%);
+    --h3-text-color: hsl(332, 51%, 32%);
+    --p-text-dark-color: hsl(24, 5%, 18%);
+    --p-text-light-color: hsl(30, 10%, 34%);
+    --line-break-color: hsl(30, 54%, 90%);
+}
+
+/*CSS common styles*/
+p,
+h1,
+h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container,
+.container-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-card section {
+    padding: 0 2.25rem;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-background-color);
+    position: relative;
+    overflow-y: auto;
+
+}
+
+.container-card {
+    width: 42rem;
+    height: auto;
+    background-color: var(--secondary-background-color);
+    border-radius: 20px;
+    position: absolute;
+    top:8rem;
+    padding-bottom: 1rem;
+
+}
+
+.container-card section:first-child {
+    padding: 2.25rem 2.25rem;
+}
+
+.container-card img {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+}
+
+.container-card h1 {
+    color: var(--h1-text-color);
+    font-family: 'young-serif', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.container-card section:nth-child(2) {
+    font-family: 'outfit', sans-serif;
+    color: var(--p-text-light-color);
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.container-card section:nth-child(2)>div {
+    background-color: var(--primary-background-color);
+    padding: 1rem 2.25rem 1rem 2.25rem;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    border-radius: 10px;
+}
+
+.container-card section:nth-child(2)>div>ul {
+    padding: 0.5rem 0 0 0.5rem;
+    list-style: inside;
+}
+
+.container-card section:nth-child(2)>div>h3
+{
+    color: var(--h3-text-color);
+}
+
+.container-card section:nth-child(3) {
+    font-family: 'outfit', sans-serif;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.container-card section:nth-child(4)>h2, 
+.container-card section:nth-child(3)>h2,
+.container-card section:nth-child(5)>h2{
+    color: var(--h2-text-color);
+
+}
+
+.container-card section:nth-child(3)>ul {
+    padding: 0.5rem 0 0 0.5rem;
+    list-style: inside;
+    line-height: 2rem;
+    color: var(--p-text-light-color);
+}
+
+.line-break{
+    width: 100%;
+    padding: 1rem 2.25rem;
+    border-bottom: 1px solid var(--line-break-color);
+}
+
+
+.container-card section:nth-child(4) {
+    font-family: 'outfit', sans-serif;
+    color: var(--p-text-light-color);
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.container-card section:nth-child(4)>ol {
+    padding: 0.5rem 0 0 0.5rem;
+    line-height: 2rem;
+    color: var(--p-text-light-color);
+}
+
+.container-card section:nth-child(4)>ol>li {
+   margin-left: 1rem;
+}
+
+.container-card section:nth-child(4)>h2,
+.container-card section:nth-child(5)>h2 {
+   margin-top: 1rem;
+}
+
+.container-card section:nth-child(5) {
+    font-family: 'outfit', sans-serif;
+    color: var(--p-text-light-color);
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.container-card section:nth-child(5)>p{
+    padding-top: 1rem;
+}
+
+table{
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-family: 'outfit', sans-serif;
+    height: 200px;
+    border-collapse: collapse;
+}
+
+table > tr{
+    margin: 2rem 0;
+}
+
+td{
+    border-bottom: 1px solid var(--line-break-color);
+}
+
+.table-content{
+    font-weight: 900;
+    color:var(--h2-text-color);
+    border-bottom: 1px solid var(--line-break-color);
+}
+
+.attribution{
+    font-family: 'outfit', sans-serif;
+    font-size: 0.8rem;
+    color: var(--p-text-light-color);
+    margin-top: 1rem;
+    text-align: center;
+    line-height: 1rem;
+}
+
+
+
